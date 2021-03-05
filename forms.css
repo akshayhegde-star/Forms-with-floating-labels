@@ -1,0 +1,127 @@
+.container {
+    position: relative;
+    width: 20% !important;
+    border: 1px solid;
+    padding: 30px;
+    margin: auto;
+}
+
+.container-social {
+    position: relative;
+    border: 1px solid;
+    padding: 30px;
+    margin: auto;
+}
+
+
+/* input[type=text],
+input[type=password],
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+} */
+
+textarea {
+    width: 100%;
+    padding: 12px 0px;
+    margin: 8px 0;
+    height: 100px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white !important;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container>h2 {
+    text-align: center;
+}
+
+.text-color {
+    color: red;
+    position: relative;
+    bottom: 30px;
+}
+
+.button-size>button {
+    width: 60%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.button-size {
+    padding-left: 145px;
+}
+
+.bg {
+    background-color: #ccc;
+    padding: 100px;
+}
+
+.alignment {
+    position: relative;
+    bottom: 45px;
+}
+
+.borderleft {
+    border-left: 5px solid red;
+    height: 200px;
+    position: relative;
+}
+
+.or-text-align {
+    position: absolute;
+    right: 54.4%;
+    top: 50%;
+    background-color: white;
+    color: red;
+    border-radius: 50%;
+    padding: 17px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* floating label */
+
+.form-group.floating>label {
+    bottom: 34px;
+    left: 8px;
+    position: relative;
+    background-color: white;
+    padding: 0px 5px 0px 5px;
+    font-size: 12px;
+    transition: 0.1s;
+    pointer-events: none;
+    font-weight: 500 !important;
+    transform-origin: bottom left;
+    color: #00000082;
+}
+
+.form-control.floating:focus~label {
+    transform: translate(1px, -85%) scale(0.80);
+    opacity: .8;
+    color: #005ebf;
+}
+
+.form-control.floating:valid~label {
+    transform-origin: bottom left;
+    transform: translate(1px, -85%) scale(0.80);
+    opacity: .8;
+}

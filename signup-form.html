@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signup-Form</title>
+    <link href="forms.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>Signup Form</h2>
+        <form>
+            <div class="form-group floating">
+
+                <input type="text" name="Email" id="email" class="form-control floating" required value="">
+                <label for="email">Email :</label>
+                <div id="e-mail" class="text-color"></div>
+            </div>
+            <div class="form-group floating">
+
+                <input type="password" name="password" id="pw" class="form-control floating" required value="">
+                <label for="pw">Password :</label>
+                <div id="pwd" class="text-color"></div>
+            </div>
+            <div class="form-group floating">
+
+                <input type="password" name="Cpassword" id="confo" class="form-control floating" required value="">
+                <label for="confo">Confirm Password :</label>
+                <div id="cpwd" class="text-color"></div>
+            </div>
+
+            <button type="button" onclick="validateUser()">SIGNUP</button>
+
+
+        </form>
+    </div>
+
+    <script>
+        function validateUser() {
+            var Email = document.getElementById('email').value;
+            var password = document.getElementById('pw').value;
+            var Cpassword = document.getElementById('confo').value;
+
+
+            if (Email == "") {
+                document.getElementById('e-mail').innerHTML = "Please Enter Email";
+                document.getElementById('email').style.border = "2px solid red";
+            }
+            if (password == "") {
+                document.getElementById('pwd').innerHTML = "Please EnterYour Password";
+                document.getElementById('pw').style.border = "2px solid red";
+            }
+
+            if (Cpassword == "") {
+                document.getElementById('cpwd').innerHTML = "Please Confirm Your Password";
+                document.getElementById('confo').style.border = "2px solid red";
+            } else if (password !== Cpassword) {
+                document.getElementById('cpwd').innerHTML = "Password doesnt match";
+                document.getElementById('confo').style.border = "2px solid red";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

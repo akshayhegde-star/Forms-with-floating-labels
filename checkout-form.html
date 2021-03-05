@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Checkout Form</title>
+    <link href="forms.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-social ">
+        <h2 class="text-center">Checkout Form</h2>
+        <form>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4 class="text-center">Billing Address :</h4>
+                    <div class="form-group floating">
+
+                        <input type="text" name="fullname" id="fname" class="form-control floating" required value="">
+                        <label for="fname">Full Name :</label>
+                        <div id="full-name" class="text-color"></div>
+                    </div>
+                    <div class="form-group floating">
+
+                        <input type="text" name="Email" id="email" class="form-control floating" required value="">
+                        <label for="email">Email :</label>
+                        <div id="e-mail" class="text-color"></div>
+                    </div>
+
+                    <div class="form-group floating">
+
+                        <input type="text" name="add" id="adrs" class="form-control floating" required value="">
+                        <label for="adrs">Address :</label>
+                        <div id="address" class="text-color"></div>
+                    </div>
+                    <div class="form-group floating">
+
+                        <input type="text" name="statename" id="state" class="form-control floating" required value="">
+                        <label for="state">State :</label>
+                        <div id="mystate" class="text-color"></div>
+
+                    </div>
+                </div class="form-group floating">
+                <div class="col-lg-6">
+                    <h4 class="text-center">Payment :</h4>
+                    <div class="form-group floating">
+
+                        <input type="text" name="cardname" id="cname" class="form-control floating" required value="">
+                        <label for="cname">Card holder name :</label>
+
+                    </div>
+                    <div class="form-group floating">
+
+                        <input type="text" name="cardno" id="cnum" class="form-control floating" required value="">
+                        <label for="cnum">Card Number:</label>
+                        <div id="cardnumber" class="text-color"></div>
+
+                    </div>
+                    <div class="form-group floating">
+
+                        <input type="text" name="ex-month" id="month" class="form-control floating" required value="">
+                        <label for="month">Exp Month :</label>
+
+                    </div>
+                    <div class="form-group floating">
+
+                        <input type="text" name="cvv" id="cv" class="form-control floating" required value="">
+                        <label for="cv">CVV :</label>
+
+                    </div>
+                </div>
+            </div>
+            <button type="button" onclick="validateUser()">Continue to Checkout</button>
+
+
+        </form>
+    </div>
+
+
+    <script>
+        function validateUser() {
+            var fullname = document.getElementById('fname').value;
+            var Email = document.getElementById('email').value;
+            var add = document.getElementById('adrs').value;
+            var statename = document.getElementById('state').value;
+            var cardno = document.getElementById('cnum').value;
+
+
+            if (fullname == "") {
+                document.getElementById('full-name').innerHTML = "Please Enter fullname";
+                document.getElementById('fname').style.border = "2px solid red";
+            }
+            if (Email == "") {
+                document.getElementById('e-mail').innerHTML = "Please Enter Your email";
+                document.getElementById('email').style.border = "2px solid red";
+            }
+
+            if (add == "") {
+                document.getElementById('address').innerHTML = "Please enter Shipping Address";
+                document.getElementById('adrs').style.border = "2px solid red";
+            }
+            if (statename == "") {
+                document.getElementById('mystate').innerHTML = "Please enter State";
+                document.getElementById('state').style.border = "2px solid red";
+            }
+            if (cardno == "") {
+                document.getElementById('cardnumber').innerHTML = "Please enter Card Number";
+                document.getElementById('cnum').style.border = "2px solid red";
+            }
+        }
+    </script>
+</body>
+
+</html>

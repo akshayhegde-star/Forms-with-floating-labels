@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact-Form</title>
+    <link href="forms.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Contact Form</h2>
+        <form>
+            <div class="form-group floating">
+
+                <input type="text" name="firstname" id="fname" class="form-control floating" required value="">
+                <label for="fname">First Name :</label>
+                <div id="f-name" class="text-color"></div>
+            </div>
+            <div class="form-group floating">
+
+                <input type="text" name="lastname" id="lname" class="form-control floating" required value="">
+                <label for="lname">Last Name :</label>
+                <div id="l-name" class="text-color"></div>
+            </div>
+            <div class="form-group floating">
+
+                <input type="text" name="cntry" id="country" class="form-control floating" required value="">
+                <label for="country">Country:</label>
+                <div id="cntry" class="text-color"></div>
+
+            </div>
+
+
+            <div>
+                <label for="sub">Subject:</label>
+                <textarea placeholder="Write your Message here..."></textarea>
+
+
+            </div>
+
+            <button type="button" onclick="validateUser()">SUBMIT</button>
+
+
+        </form>
+    </div>
+    <!-- Script -->
+    <script>
+        function validateUser() {
+            var firstname, lastname, cntry;
+            firstname = document.getElementById("fname").value;
+            lastname = document.getElementById("lname").value;
+            cntry = document.getElementById("country").value;
+            if (firstname == "") {
+                document.getElementById('f-name').innerHTML = "Please Enter First Name";
+                document.getElementById('fname').style.border = "2px solid red";
+            }
+            if (lastname == "") {
+                document.getElementById('l-name').innerHTML = "Please Enter Last Name";
+                document.getElementById('lname').style.border = "2px solid red";
+            }
+            if (cntry == "") {
+                document.getElementById('cntry').innerHTML = "Please Enter Country";
+                document.getElementById('country').style.border = "2px solid red";
+            } else {
+                document.getElementById('fname').style.border = "2px solid green";
+                document.getElementById('lname').style.border = "2px solid green";
+                document.getElementById('country').style.border = "2px solid green";
+
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

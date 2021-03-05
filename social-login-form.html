@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Social Login</title>
+    <link href="forms.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-social ">
+        <h1 class="text-center">Login with Social Medias</h1>
+        <div class="row bg">
+            <div class="col-lg-5 button-size">
+                <button type="button" class="btn btn-primary">Login With Facebook</button>
+                <button type="button" class="btn btn-info">Login With Twitter</button>
+                <button type="button" class="btn btn-danger">Login With Google+</button>
+
+            </div>
+            <div class="borderleft col-lg-2"></div>
+            <p class="or-text-align">OR</p>
+            <div class="col-lg-4">
+                <form class="alignment">
+                    <div class="form-group floating">
+
+                        <input type="text" name="uname" id="user-name" class="form-control floating" required value="">
+                        <label for="user-name">User Name :</label>
+                        <div id="username" class="text-color"></div>
+                    </div>
+                    <div class="form-group floating">
+
+                        <input type="password" name="password" id="pw" class="form-control floating" required value="">
+                        <label for="pw">Password :</label>
+                        <div id="pwd" class="text-color"></div>
+                    </div>
+
+                    <button type="button" onclick="validateUser()">LOGIN</button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script>
+        function validateUser() {
+            var uname, password;
+            uname = document.getElementById("user-name").value;
+            password = document.getElementById("pw").value;
+            if (uname == "") {
+                document.getElementById('username').innerHTML = "Please Enter User Name";
+                document.getElementById('user-name').style.border = "2px solid red";
+
+            }
+            if (password == "") {
+                document.getElementById('pwd').innerHTML = "Please Enter Your Password";
+                document.getElementById('pw').style.border = "2px solid red";
+            } else {
+                document.getElementById('pw').style.border = "2px solid green";
+                document.getElementById('user-name').style.border = "2px solid green";
+
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
